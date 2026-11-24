@@ -1,0 +1,1202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>银儿女主玩物社区y - 官方视频门户_原创玩物内容生态</title>
+<meta name="description" content="银儿女主玩物社区y官方网站，专注玩物收藏、开箱测评与女主成长故事的高清原创视频社区，汇聚优质创作者与企业内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b98a3c'/%3E%3Cpath d='M32 12l6.5 13.2 14.5 2.1-10.5 10.2 2.5 14.5L32 45.4 19 52l2.5-14.5L11 27.3l14.5-2.1z' fill='%23fff5e0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --yng-gold:#b98a3c;
+  --yng-gold-deep:#8f6623;
+  --yng-cream:#fbf6ec;
+  --yng-ink:#2c2318;
+  --yng-muted:#7a6a53;
+  --yng-line:#e7dcc6;
+  --yng-card:#fffdf8;
+  --yng-shadow:0 10px 30px rgba(80,60,30,.08);
+  --yng-radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--yng-ink);
+  background:var(--yng-cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.yng-container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+
+/* 公告条 + 页头 吸顶 */
+.yng-topbar-wrap{position:sticky;top:0;z-index:200}
+.yng-announce{
+  background:linear-gradient(90deg,#8f6623,#b98a3c 45%,#d8ad63);
+  color:#fff8ea;font-size:13px;letter-spacing:.3px;
+  padding:9px 0;
+}
+.yng-announce .yng-container{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.yng-announce-tag{
+  background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);
+  padding:1px 9px;border-radius:99px;font-size:11px;white-space:nowrap;
+}
+.yng-announce-text{flex:1;min-width:200px}
+.yng-announce-link{color:#fff;font-weight:600;border-bottom:1px dashed rgba(255,255,255,.7);white-space:nowrap}
+
+.yng-header{background:rgba(251,246,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--yng-line)}
+.yng-header .yng-container{display:flex;align-items:center;gap:20px;min-height:70px}
+.yng-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
+.yng-brand-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#b98a3c,#8f6623);display:grid;place-items:center;color:#fff5e0;font-size:17px;font-weight:900;box-shadow:0 4px 12px rgba(143,102,35,.35)}
+.yng-brand small{display:block;font-size:10px;font-weight:500;color:var(--yng-muted);letter-spacing:2px}
+.yng-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap}
+.yng-nav a{padding:7px 12px;font-size:14px;color:var(--yng-muted);border-radius:9px;transition:.2s}
+.yng-nav a:hover{color:var(--yng-gold-deep);background:rgba(185,138,60,.1)}
+.yng-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.yng-search{position:relative}
+.yng-search input{
+  width:190px;padding:9px 34px 9px 14px;border-radius:99px;border:1px solid var(--yng-line);
+  background:#fff;font-size:13px;outline:none;transition:.2s;color:var(--yng-ink);
+}
+.yng-search input:focus{border-color:var(--yng-gold);box-shadow:0 0 0 3px rgba(185,138,60,.15);width:220px}
+.yng-search-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--yng-gold-deep);padding:3px}
+.yng-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:9px 18px;border-radius:99px;font-size:14px;font-weight:600;transition:.2s;white-space:nowrap;
+}
+.yng-btn-primary{background:var(--yng-gold);color:#fff;box-shadow:0 6px 16px rgba(143,102,35,.28)}
+.yng-btn-primary:hover{background:var(--yng-gold-deep);transform:translateY(-1px)}
+.yng-btn-ghost{border:1px solid var(--yng-gold);color:var(--yng-gold-deep);background:rgba(255,255,255,.6)}
+.yng-btn-ghost:hover{background:var(--yng-gold);color:#fff}
+.yng-burger{display:none;font-size:22px;padding:6px 10px;border:1px solid var(--yng-line);border-radius:10px;background:#fff}
+.yng-search-feedback{
+  display:none;position:absolute;top:calc(100% + 8px);left:0;width:260px;background:#fff;
+  border:1px solid var(--yng-line);border-radius:12px;padding:10px 14px;font-size:13px;
+  color:var(--yng-muted);box-shadow:var(--yng-shadow);z-index:50;
+}
+.yng-search-feedback.yng-show{display:block}
+
+/* 首屏 */
+.yng-hero{padding:52px 0 40px;position:relative;overflow:hidden}
+.yng-hero::before{
+  content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(216,173,99,.28),transparent 68%);
+}
+.yng-hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:44px;align-items:center;position:relative}
+.yng-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:var(--yng-gold-deep);font-weight:700;margin-bottom:16px}
+.yng-hero-eyebrow::before{content:"";width:26px;height:2px;background:var(--yng-gold)}
+.yng-hero h1{
+  font-size:clamp(34px,4.4vw,56px);line-height:1.14;letter-spacing:-.5px;font-weight:900;
+  margin-bottom:18px;color:#241c10;
+}
+.yng-hero h1 em{font-style:normal;color:var(--yng-gold-deep)}
+.yng-hero-lead{font-size:16px;color:#54452f;max-width:580px;margin-bottom:14px}
+.yng-hero-intro{font-size:14px;color:var(--yng-muted);max-width:600px;margin-bottom:26px}
+.yng-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.yng-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:560px}
+.yng-stat{background:rgba(255,255,255,.75);border:1px solid var(--yng-line);border-radius:13px;padding:13px 16px}
+.yng-stat b{display:block;font-size:22px;color:var(--yng-gold-deep);line-height:1.3;font-weight:800}
+.yng-stat span{font-size:12px;color:var(--yng-muted)}
+.yng-hero-visual{position:relative}
+.yng-hero-visual img{border-radius:22px;box-shadow:0 24px 60px rgba(80,60,30,.22);aspect-ratio:4/5;object-fit:cover;width:100%}
+.yng-hero-badge{
+  position:absolute;left:-14px;bottom:26px;background:#fff;border-radius:14px;padding:11px 16px;
+  box-shadow:var(--yng-shadow);border:1px solid var(--yng-line);font-size:12px;color:var(--yng-muted);
+}
+.yng-hero-badge b{display:block;color:var(--yng-ink);font-size:15px}
+
+/* section 通用 */
+.yng-section{padding:56px 0}
+.yng-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.yng-section-head h2{font-size:clamp(23px,2.6vw,31px);letter-spacing:-.3px;font-weight:800;line-height:1.3}
+.yng-section-head p{font-size:14px;color:var(--yng-muted);margin-top:6px;max-width:640px}
+.yng-kicker{font-size:12px;letter-spacing:2px;font-weight:700;color:var(--yng-gold-deep);display:block;margin-bottom:6px}
+
+/* 焦点区：一大幅 + 文字列表 */
+.yng-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px}
+.yng-focus-main{background:var(--yng-card);border:1px solid var(--yng-line);border-radius:var(--yng-radius);overflow:hidden;box-shadow:var(--yng-shadow);transition:.25s}
+.yng-focus-main:hover{transform:translateY(-3px)}
+.yng-focus-main img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.yng-focus-body{padding:20px 22px 24px}
+.yng-tag{display:inline-block;font-size:11px;padding:2px 10px;border-radius:99px;background:rgba(185,138,60,.14);color:var(--yng-gold-deep);font-weight:600;margin-right:6px}
+.yng-focus-body h3{font-size:20px;margin:10px 0 8px;line-height:1.45}
+.yng-focus-body p{font-size:14px;color:var(--yng-muted)}
+.yng-meta{display:flex;gap:14px;font-size:12px;color:var(--yng-muted);margin-top:14px;flex-wrap:wrap;align-items:center}
+.yng-focus-list{display:flex;flex-direction:column;gap:14px}
+.yng-focus-item{
+  display:grid;grid-template-columns:56px 1fr;gap:14px;background:var(--yng-card);
+  border:1px solid var(--yng-line);border-radius:13px;padding:15px 17px;transition:.2s;
+}
+.yng-focus-item:hover{border-color:var(--yng-gold);transform:translateX(3px)}
+.yng-focus-num{font-size:26px;font-weight:900;color:rgba(185,138,60,.4);line-height:1;font-family:Georgia,serif}
+.yng-focus-item h3{font-size:15.5px;margin-bottom:5px;line-height:1.5}
+.yng-focus-item p{font-size:12.5px;color:var(--yng-muted)}
+
+/* 视频卡片 */
+.yng-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.yng-video-card{background:var(--yng-card);border:1px solid var(--yng-line);border-radius:var(--yng-radius);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.yng-video-card:hover{box-shadow:var(--yng-shadow);transform:translateY(-3px);border-color:rgba(185,138,60,.5)}
+.yng-video-thumb{position:relative}
+.yng-video-thumb img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.yng-play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(36,28,16,.18);opacity:0;transition:.25s}
+.yng-video-card:hover .yng-play{opacity:1}
+.yng-play span{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--yng-gold-deep);font-size:18px;padding-left:3px}
+.yng-duration{position:absolute;right:10px;bottom:10px;background:rgba(36,28,16,.78);color:#fff;font-size:11px;padding:2px 8px;border-radius:6px}
+.yng-video-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.yng-video-body h3{font-size:16px;line-height:1.5}
+.yng-video-body p{font-size:13px;color:var(--yng-muted)}
+.yng-video-foot{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:10px;border-top:1px dashed var(--yng-line);font-size:12px;color:var(--yng-muted);flex-wrap:wrap}
+.yng-action{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:99px;border:1px solid var(--yng-line);background:#fff;font-size:12px;transition:.18s}
+.yng-action:hover{border-color:var(--yng-gold);color:var(--yng-gold-deep)}
+.yng-action.yng-liked{background:rgba(185,138,60,.14);border-color:var(--yng-gold);color:var(--yng-gold-deep);font-weight:600}
+
+/* 专题 */
+.yng-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.yng-topic-card{background:linear-gradient(175deg,#fffdf8,#f7efdf);border:1px solid var(--yng-line);border-radius:var(--yng-radius);padding:22px;transition:.25s}
+.yng-topic-card:hover{transform:translateY(-4px);box-shadow:var(--yng-shadow)}
+.yng-topic-status{font-size:11px;color:#fff;background:var(--yng-gold);padding:2px 9px;border-radius:99px;display:inline-block;margin-bottom:10px}
+.yng-topic-card h3{font-size:17px;margin-bottom:8px;line-height:1.45}
+.yng-topic-card>p{font-size:13px;color:var(--yng-muted);margin-bottom:14px}
+.yng-topic-card ul{display:flex;flex-direction:column;gap:8px}
+.yng-topic-card li{font-size:13px;padding-left:16px;position:relative;color:#4b3d28}
+.yng-topic-card li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--yng-gold)}
+
+/* 作者矩阵 双列简介 */
+.yng-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.yng-author{display:grid;grid-template-columns:64px 1fr;gap:16px;background:var(--yng-card);border:1px solid var(--yng-line);border-radius:var(--yng-radius);padding:20px;transition:.25s}
+.yng-author:hover{border-color:var(--yng-gold);box-shadow:var(--yng-shadow)}
+.yng-avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:23px;font-weight:800;color:#fff;flex-shrink:0}
+.yng-author h3{font-size:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.yng-author h3 span{font-size:10px;font-weight:600;color:var(--yng-gold-deep);background:rgba(185,138,60,.13);padding:1px 8px;border-radius:99px}
+.yng-author-field{font-size:12px;color:var(--yng-gold-deep);font-weight:600;margin:3px 0 6px}
+.yng-author p{font-size:13px;color:var(--yng-muted)}
+.yng-author-more{margin-top:8px;font-size:12px;color:var(--yng-gold-deep);font-weight:600;border-bottom:1px dashed var(--yng-gold);display:inline-block}
+
+/* 评论 两列短评 */
+.yng-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.yng-comment-card{background:#fff;border:1px solid var(--yng-line);border-left:3px solid var(--yng-gold);border-radius:12px;padding:17px 19px}
+.yng-comment-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.yng-comment-avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+.yng-comment-head b{font-size:13.5px}
+.yng-comment-head small{color:var(--yng-muted);font-size:11.5px}
+.yng-comment-card p{font-size:13.5px;color:#463a27}
+.yng-stars{color:#d8ad63;letter-spacing:1px;font-size:13px;margin-top:6px}
+
+/* 数据分析 / 关键词深度解析 */
+.yng-essay{background:#fff;border:1px solid var(--yng-line);border-radius:22px;padding:38px 42px;box-shadow:var(--yng-shadow)}
+.yng-essay h2{font-size:clamp(22px,2.4vw,29px);margin-bottom:8px}
+.yng-essay>.yng-kicker{margin-bottom:4px}
+.yng-essay h3{font-size:18px;margin:26px 0 10px;color:#2c2318;display:flex;gap:9px;align-items:center}
+.yng-essay h3::before{content:"";width:5px;height:18px;border-radius:3px;background:var(--yng-gold);flex-shrink:0}
+.yng-essay p{font-size:14.5px;color:#4d402c;margin-bottom:12px;text-align:justify}
+.yng-essay strong{color:var(--yng-gold-deep)}
+.yng-essay-figure{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0 6px}
+.yng-essay-figure figure{margin:0}
+.yng-essay-figure img{border-radius:12px;aspect-ratio:16/9;object-fit:cover;width:100%;border:1px solid var(--yng-line)}
+.yng-essay-figure figcaption{font-size:12px;color:var(--yng-muted);margin-top:6px;text-align:center}
+
+/* 企业动态 时间轴式 */
+.yng-news-list{display:flex;flex-direction:column;gap:0}
+.yng-news-item{display:grid;grid-template-columns:118px 1fr;gap:20px;padding:18px 0;border-bottom:1px dashed var(--yng-line)}
+.yng-news-item:last-child{border-bottom:none}
+.yng-news-date{font-size:13px;color:var(--yng-gold-deep);font-weight:700;padding-top:2px}
+.yng-news-item h3{font-size:15.5px;margin-bottom:5px}
+.yng-news-item p{font-size:13px;color:var(--yng-muted)}
+
+/* 合作墙 */
+.yng-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.yng-partner{background:#fff;border:1px solid var(--yng-line);border-radius:13px;padding:20px 14px;text-align:center;font-weight:700;font-size:14px;color:#5c4a30;transition:.2s}
+.yng-partner:hover{border-color:var(--yng-gold);color:var(--yng-gold-deep);transform:translateY(-2px)}
+.yng-partner small{display:block;font-size:11px;color:var(--yng-muted);font-weight:400;margin-top:4px}
+
+/* FAQ */
+.yng-faq{display:flex;flex-direction:column;gap:12px;max-width:880px;margin:0 auto}
+.yng-faq details{background:#fff;border:1px solid var(--yng-line);border-radius:13px;padding:16px 20px;transition:.2s}
+.yng-faq details[open]{border-color:var(--yng-gold);box-shadow:var(--yng-shadow)}
+.yng-faq summary{font-size:15px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.yng-faq summary::-webkit-details-marker{display:none}
+.yng-faq summary::after{content:"+";font-size:20px;color:var(--yng-gold);font-weight:400;line-height:1;transition:.2s}
+.yng-faq details[open] summary::after{content:"−"}
+.yng-faq p{font-size:13.5px;color:var(--yng-muted);margin-top:10px;padding-top:10px;border-top:1px dashed var(--yng-line)}
+
+/* 投稿/联系 */
+.yng-cta{background:linear-gradient(120deg,#2c2318,#4a381f 65%,#6b4f25);border-radius:24px;padding:44px 46px;color:#f7efdf;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:34px;align-items:center}
+.yng-cta h2{font-size:clamp(22px,2.5vw,30px);margin-bottom:12px;color:#fff8ea}
+.yng-cta p{font-size:14px;color:#d8ccb5;margin-bottom:8px}
+.yng-cta-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.yng-cta .yng-btn-primary{background:#d8ad63;color:#2c2318;box-shadow:none}
+.yng-cta .yng-btn-primary:hover{background:#ecc98c}
+.yng-cta .yng-btn-ghost{border-color:#d8ad63;color:#f0dcb4;background:transparent}
+.yng-cta .yng-btn-ghost:hover{background:#d8ad63;color:#2c2318}
+.yng-cta-stats{display:grid;gap:12px}
+.yng-cta-stat{border:1px solid rgba(216,173,99,.35);border-radius:12px;padding:13px 16px;background:rgba(255,255,255,.04)}
+.yng-cta-stat b{font-size:20px;color:#ecc98c;display:block}
+.yng-cta-stat span{font-size:12px;color:#c9bda4}
+
+/* 页脚 */
+.yng-footer{background:#241c10;color:#c9bda4;padding:52px 0 26px;margin-top:10px}
+.yng-footer-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:34px;padding-bottom:34px;border-bottom:1px solid rgba(201,189,164,.16)}
+.yng-footer .yng-brand{color:#fff8ea;margin-bottom:12px}
+.yng-footer p{font-size:13px;line-height:1.85}
+.yng-footer h4{color:#f0dcb4;font-size:14px;margin-bottom:12px}
+.yng-footer li{font-size:13px;margin-bottom:7px}
+.yng-footer li a:hover{color:#ecc98c}
+.yng-footer-bottom{display:flex;justify-content:space-between;gap:16px;padding-top:22px;font-size:12px;flex-wrap:wrap;color:#a89b83}
+
+/* 回到顶部 */
+.yng-to-top{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--yng-gold);color:#fff;font-size:19px;display:grid;place-items:center;
+  box-shadow:0 8px 22px rgba(143,102,35,.4);opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:.25s;z-index:180;
+}
+.yng-to-top.yng-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+
+/* Toast & Modal */
+.yng-toast{
+  position:fixed;left:50%;bottom:40px;transform:translate(-50%,20px);background:#2c2318;color:#fff8ea;
+  padding:11px 22px;border-radius:99px;font-size:13.5px;opacity:0;pointer-events:none;transition:.28s;z-index:400;
+  box-shadow:0 10px 28px rgba(0,0,0,.3);
+}
+.yng-toast.yng-show{opacity:1;transform:translate(-50%,0)}
+.yng-modal-mask{
+  position:fixed;inset:0;background:rgba(36,28,16,.55);display:none;place-items:center;z-index:350;padding:20px;
+}
+.yng-modal-mask.yng-show{display:grid}
+.yng-modal{
+  background:#fffdf8;border-radius:20px;max-width:560px;width:100%;padding:30px 32px;box-shadow:0 30px 70px rgba(0,0,0,.35);
+  max-height:86vh;overflow:auto;
+}
+.yng-modal h3{font-size:20px;margin-bottom:6px}
+.yng-modal>p{font-size:13.5px;color:var(--yng-muted);margin-bottom:18px}
+.yng-modal label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:#4d402c}
+.yng-modal input,.yng-modal textarea,.yng-modal select{
+  width:100%;padding:10px 13px;border:1px solid var(--yng-line);border-radius:10px;font-size:14px;
+  font-family:inherit;margin-bottom:14px;outline:none;background:#fff;color:var(--yng-ink);
+}
+.yng-modal input:focus,.yng-modal textarea:focus,.yng-modal select:focus{border-color:var(--yng-gold);box-shadow:0 0 0 3px rgba(185,138,60,.14)}
+.yng-modal textarea{resize:vertical;min-height:88px}
+.yng-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
+.yng-modal-close{position:sticky;top:0;float:right;font-size:22px;color:var(--yng-muted);line-height:1;padding:0 4px}
+
+/* 响应式 */
+@media(max-width:960px){
+  .yng-hero-grid{grid-template-columns:1fr;gap:32px}
+  .yng-hero-visual img{aspect-ratio:16/10}
+  .yng-focus-grid{grid-template-columns:1fr}
+  .yng-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .yng-author-grid{grid-template-columns:1fr}
+  .yng-partners{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .yng-cta{grid-template-columns:1fr;padding:34px 28px}
+  .yng-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:820px){
+  .yng-nav{
+    display:none;position:absolute;top:100%;left:0;right:0;background:#fffdf8;
+    flex-direction:column;padding:12px 20px 18px;border-bottom:1px solid var(--yng-line);
+    box-shadow:0 14px 30px rgba(80,60,30,.14);gap:2px;
+  }
+  .yng-nav.yng-open{display:flex}
+  .yng-header .yng-container{position:relative;flex-wrap:wrap;min-height:64px;padding-top:8px;padding-bottom:8px}
+  .yng-burger{display:block}
+  .yng-header-tools{margin-left:auto}
+  .yng-search input{width:140px}
+  .yng-search input:focus{width:170px}
+  .yng-search-feedback{width:220px}
+  .yng-hero{padding:34px 0 26px}
+  .yng-section{padding:40px 0}
+  .yng-video-grid{grid-template-columns:1fr}
+  .yng-comment-grid{grid-template-columns:1fr}
+  .yng-essay{padding:26px 22px}
+  .yng-essay-figure{grid-template-columns:1fr}
+  .yng-topic-grid{grid-template-columns:1fr}
+  .yng-author{grid-template-columns:54px 1fr;padding:16px}
+  .yng-avatar{width:54px;height:54px;font-size:19px}
+  .yng-news-item{grid-template-columns:1fr;gap:4px}
+  .yng-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .yng-stat{padding:10px 10px}
+  .yng-stat b{font-size:17px}
+  .yng-stat span{font-size:11px}
+  .yng-footer-grid{grid-template-columns:1fr}
+  .yng-announce{font-size:12px}
+}
+@media(max-width:560px){
+  .yng-search{display:none}
+  .yng-hero-actions .yng-btn{flex:1}
+  .yng-partners{grid-template-columns:1fr}
+  .yng-author-grid{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="yng-topbar-wrap">
+  <div class="yng-announce">
+    <div class="yng-container">
+      <span class="yng-announce-tag">最新发布</span>
+      <span class="yng-announce-text">「银光周年企划·玩物共创季」正式上线：新增 12 期开箱纪录片、6 位签约创作者与冬季玩物投票专题开放报名。</span>
+      <a class="yng-announce-link" href="#yng-topic">查看企划 ›</a>
+    </div>
+  </div>
+  <header class="yng-header">
+    <div class="yng-container">
+      <a class="yng-brand" href="#yng-top">
+        <span class="yng-brand-mark">银</span>
+        <span>银儿女主玩物社区y<small>OFFICIAL VIDEO</small></span>
+      </a>
+      <button class="yng-burger" id="yngBurger" aria-label="展开导航">☰</button>
+      <nav class="yng-nav" id="yngNav" aria-label="主导航">
+        <a href="#yng-top">首页</a>
+        <a href="#yng-focus">精选内容</a>
+        <a href="#yng-topic">专题企划</a>
+        <a href="#yng-authors">创作者</a>
+        <a href="#yng-essay">品牌解析</a>
+        <a href="#yng-comments">用户口碑</a>
+        <a href="#yng-faq">帮助中心</a>
+      </nav>
+      <div class="yng-header-tools">
+        <div class="yng-search">
+          <input type="search" id="yngSearch" placeholder="搜索玩物、作者、专题…" aria-label="站内搜索">
+          <button class="yng-search-btn" id="yngSearchBtn" aria-label="搜索">🔍</button>
+          <div class="yng-search-feedback" id="yngSearchFeedback"></div>
+        </div>
+        <button class="yng-btn yng-btn-primary" data-modal="submit">投稿入口</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- S2 品牌首屏 -->
+<section class="yng-hero" id="yng-top">
+  <div class="yng-container yng-hero-grid">
+    <div>
+      <span class="yng-hero-eyebrow">官方网站 · 银儿女主玩物社区y</span>
+      <h1>银儿女主玩物社区y：把每一次<em>玩物心动</em>拍成高清影像</h1>
+      <p class="yng-hero-lead">专注玩物收藏、开箱测评与女主成长故事的专业视频社区，用原创镜头记录人与物之间的真实温度。</p>
+      <p class="yng-hero-intro">作为深耕玩物内容生态的垂直领域品牌，银儿女主玩物社区y官方网站由一支热爱收藏与拍摄的团队持续运营，为创作者与企业搭建值得信赖的高清内容平台。我们相信，每一件被认真对待的玩物，都值得一段有品质的影像叙事。</p>
+      <div class="yng-hero-actions">
+        <a class="yng-btn yng-btn-primary" href="#yng-focus">观看精选内容</a>
+        <a class="yng-btn yng-btn-ghost" href="#yng-authors">认识创作者</a>
+        <button class="yng-btn yng-btn-ghost" data-modal="submit">上传作品</button>
+        <a class="yng-btn yng-btn-ghost" href="#yng-essay">了解品牌故事</a>
+      </div>
+      <div class="yng-stats">
+        <div class="yng-stat"><b>4,280+</b><span>原创玩物视频</span></div>
+        <div class="yng-stat"><b>126万</b><span>社区创作者成员</span></div>
+        <div class="yng-stat"><b>98.4%</b><span>用户口碑好评率</span></div>
+      </div>
+    </div>
+    <div class="yng-hero-visual">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 600'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233e2f1a'/%3E%3Cstop offset='1' stop-color='%23b98a3c'/%3E%3C/linearGradient%3E%3ClinearGradient id='dor' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f3e3c2'/%3E%3Cstop offset='1' stop-color='%23d8ad63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='600' fill='url(%23sky)'/%3E%3Ccircle cx='360' cy='120' r='86' fill='%23f5dca8' opacity='.28'/%3E%3Ccircle cx='360' cy='120' r='54' fill='%23f8e6c0' opacity='.5'/%3E%3Crect x='70' y='170' width='340' height='300' rx='20' fill='url(%23dor)' opacity='.92'/%3E%3Crect x='96' y='196' width='288' height='180' rx='12' fill='%233e2f1a'/%3E%3Cpath d='M205 250l70 40-70 40z' fill='%23f8e6c0'/%3E%3Crect x='96' y='396' width='288' height='10' rx='5' fill='%23b98a3c'/%3E%3Crect x='96' y='418' width='180' height='8' rx='4' fill='%23c9a濃' opacity='.5'/%3E%3Ccircle cx='150' cy='528' r='26' fill='%23f3e3c2'/%3E%3Ccircle cx='230' cy='528' r='26' fill='%23d8ad63'/%3E%3Ccircle cx='310' cy='528' r='26' fill='%23f3e3c2'/%3E%3Cpath d='M40 600c60-60 140-40 200-90s140-30 200-70v160z' fill='%232c2318' opacity='.75'/%3E%3C/svg%3E" alt="银儿女主玩物社区y 首屏主视觉：暖金色展厅中陈列的玩物收藏与影像屏幕" width="480" height="600">
+      <div class="yng-hero-badge"><b>本周焦点企划</b>玩物灯下 · 第 18 期</div>
+    </div>
+  </div>
+</section>
+
+<!-- S3 主内容入口：焦点 + 热门视频 -->
+<section class="yng-section" id="yng-focus">
+  <div class="yng-container">
+    <div class="yng-section-head">
+      <div>
+        <span class="yng-kicker">FEATURED / 精选内容</span>
+        <h2>银儿女主玩物社区y 本周焦点精选</h2>
+        <p>由编辑部与社区创作者共同票选，聚焦有细节、有匠心的原创玩物影像，官方高清首发。</p>
+      </div>
+      <button class="yng-btn yng-btn-ghost" data-modal="submit">报名下一期焦点</button>
+    </div>
+
+    <div class="yng-focus-grid">
+      <article class="yng-focus-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231f2a3a'/%3E%3Cstop offset='1' stop-color='%234d6b8a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23g1)'/%3E%3Crect x='60' y='70' width='240' height='220' rx='16' fill='%23f3e3c2' opacity='.92'/%3E%3Ccircle cx='180' cy='150' r='46' fill='%23b98a3c'/%3E%3Crect x='110' y='214' width='140' height='12' rx='6' fill='%234d3a22' opacity='.6'/%3E%3Crect x='110' y='238' width='96' height='10' rx='5' fill='%234d3a22' opacity='.4'/%3E%3Crect x='350' y='90' width='230' height='140' rx='14' fill='%23e9d9b8'/%3E%3Ccircle cx='404' cy='150' r='30' fill='%231f2a3a'/%3E%3Cpath d='M392 134l26 16-26 16z' fill='%23f3e3c2'/%3E%3Crect x='440' y='132' width='110' height='10' rx='5' fill='%233e4a5e'/%3E%3Crect x='440' y='154' width='80' height='9' rx='4' fill='%233e4a5e' opacity='.65'/%3E%3Crect x='350' y='254' width='150' height='9' rx='4' fill='%23d8ad63'/%3E%3Crect x='350' y='274' width='110' height='9' rx='4' fill='%23d8ad63' opacity='.55'/%3E%3C/svg%3E" alt="焦点视频封面：创作者在蓝色工作台上拆解银色机械玩物" width="640" height="360">
+        <div class="yng-focus-body">
+          <span class="yng-tag">深度测评</span><span class="yng-tag">创作幕后</span>
+          <h3>银色机械鸟拆解全记录：从齿轮咬合到灯光呼吸的 48 小时</h3>
+          <p>本期焦点跟随创作者「雾港小禾」走进玩物修复台，完整记录一枚上世纪银色机械鸟的拆解、清洁与重新上弦过程。镜头在齿轮的微距下停留，也在人物的呼吸间留白，是本期最受社区好评的匠心影像。</p>
+          <div class="yng-meta">
+            <span>创作者：雾港小禾</span><span>时长 18:42</span><span>播放 42.6万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>1.2万</span></button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="yng-focus-list">
+        <article class="yng-focus-item">
+          <span class="yng-focus-num">01</span>
+          <div>
+            <h3>一盏旧台灯的重生：黄铜、玻璃与深夜三点的光</h3>
+            <p>修复向 · 时长 12:05 · 播放 28.3万</p>
+          </div>
+        </article>
+        <article class="yng-focus-item">
+          <span class="yng-focus-num">02</span>
+          <div>
+            <h3>女主玩物日常：桌面上永远留一个位置给喜欢的东西</h3>
+            <p>生活方式 · 时长 09:16 · 播放 21.7万</p>
+          </div>
+        </article>
+        <article class="yng-focus-item">
+          <span class="yng-focus-num">03</span>
+          <div>
+            <h3>从收藏到内容：一位玩物创作者的三年账号成长记</h3>
+            <p>人物访谈 · 时长 24:30 · 播放 17.9万</p>
+          </div>
+        </article>
+        <article class="yng-focus-item">
+          <span class="yng-focus-num">04</span>
+          <div>
+            <h3>冬日灯下投票：社区最想看的 10 件老玩物</h3>
+            <p>社区互动 · 时长 06:48 · 播放 13.4万</p>
+          </div>
+        </article>
+        <article class="yng-focus-item">
+          <span class="yng-focus-num">05</span>
+          <div>
+            <h3>新手开箱避坑攻略：灯光、背景与三脚架的取舍</h3>
+            <p>教程干货 · 时长 11:22 · 播放 12.1万</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="yng-section-head" style="margin-top:48px">
+      <div>
+        <span class="yng-kicker">COMMUNITY / 热门视频流</span>
+        <h2>持续更新的玩物影像社区</h2>
+        <p>六条来自社区首页的高清视频，覆盖开箱、修复、桌面、访谈与在地探索，均可收藏与评论。</p>
+      </div>
+    </div>
+
+    <div class="yng-video-grid">
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f5e2c0'/%3E%3Cstop offset='1' stop-color='%23c9974d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v1)'/%3E%3Crect x='90' y='80' width='460' height='220' rx='18' fill='%23fffaf0'/%3E%3Crect x='130' y='120' width='160' height='120' rx='10' fill='%23b98a3c'/%3E%3Ccircle cx='210' cy='180' r='38' fill='%23fff3da'/%3E%3Crect x='330' y='130' width='170' height='14' rx='7' fill='%23a78448'/%3E%3Crect x='330' y='162' width='130' height='11' rx='5' fill='%23a78448' opacity='.65'/%3E%3Crect x='330' y='188' width='150' height='11' rx='5' fill='%23a78448' opacity='.45'/%3E%3C/svg%3E" alt="视频封面：桌面上的黄铜摆件与暖光台灯开箱" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">08:24</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">开箱</span>
+          <h3>黄铜小摆件开箱：在暖光里看细节如何说话</h3>
+          <p>工作室成员「拾光阿梨」带你看一次克制的玩物开箱，从包装、材质到桌面搭配逐项拆解。</p>
+          <div class="yng-video-foot">
+            <span>拾光阿梨</span><span>播放 15.2万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>6,420</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%232c3f2d'/%3E%3Cstop offset='1' stop-color='%2389a06b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v2)'/%3E%3Ccircle cx='160' cy='150' r='70' fill='%23e7efd4' opacity='.9'/%3E%3Ccircle cx='160' cy='150' r='34' fill='%235d7a49'/%3E%3Crect x='300' y='80' width='270' height='200' rx='14' fill='%23f1f5e4' opacity='.92'/%3E%3Crect x='330' y='110' width='210' height='12' rx='6' fill='%236d8a55'/%3E%3Crect x='330' y='140' width='160' height='10' rx='5' fill='%236d8a55' opacity='.7'/%3E%3Crect x='330' y='168' width='190' height='10' rx='5' fill='%236d8a55' opacity='.5'/%3E%3Crect x='330' y='210' width='120' height='38' rx='19' fill='%2389a06b'/%3E%3C/svg%3E" alt="视频封面：绿地背景下的玩物收藏陈列与分类标签" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">14:10</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">收藏整理</span>
+          <h3>一百件玩物怎么收纳？社区高口碑分类法实测</h3>
+          <p>创作者「木野」分享自己使用两年的玩物分类体系，包含标签、展示与防尘的实用技巧。</p>
+          <div class="yng-video-foot">
+            <span>木野</span><span>播放 12.9万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>5,180</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23322a3f'/%3E%3Cstop offset='1' stop-color='%237d6b96'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v3)'/%3E%3Crect x='70' y='60' width='220' height='240' rx='16' fill='%23f0e8f8' opacity='.92'/%3E%3Ccircle cx='180' cy='140' r='46' fill='%237d6b96'/%3E%3Cpath d='M150 220h60l-12 50h-36z' fill='%237d6b96' opacity='.7'/%3E%3Crect x='320' y='90' width='250' height='16' rx='8' fill='%23dcd0ee'/%3E%3Crect x='320' y='124' width='190' height='12' rx='6' fill='%23dcd0ee' opacity='.7'/%3E%3Crect x='320' y='152' width='220' height='12' rx='6' fill='%23dcd0ee' opacity='.55'/%3E%3Ccircle cx='350' cy='238' r='26' fill='%23c9b6e6'/%3E%3Ccircle cx='410' cy='238' r='26' fill='%23a996cc'/%3E%3Ccircle cx='470' cy='238' r='26' fill='%23857ab0'/%3E%3C/svg%3E" alt="视频封面：紫色灯光下的女主玩物桌与访谈画面" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">21:36</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">人物访谈</span>
+          <h3>镜头之外的收藏观：和三位女主创作者聊玩物与成长</h3>
+          <p>一场不设脚本的长谈，聊收藏的起点、内容创作的焦虑，以及社区陪伴带来的力量。</p>
+          <div class="yng-video-foot">
+            <span>银儿编辑部</span><span>播放 11.4万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>4,960</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233a2a22'/%3E%3Cstop offset='1' stop-color='%23a86d4d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v4)'/%3E%3Crect x='80' y='70' width='480' height='220' rx='18' fill='%23f7e6d3' opacity='.93'/%3E%3Cpath d='M120 250c40-80 90-80 130 0z' fill='%23a86d4d' opacity='.7'/%3E%3Ccircle cx='420' cy='150' r='52' fill='%23c9974d'/%3E%3Ccircle cx='420' cy='150' r='26' fill='%23f7e6d3'/%3E%3Crect x='120' y='110' width='180' height='14' rx='7' fill='%2388593d'/%3E%3Crect x='120' y='138' width='130' height='11' rx='5' fill='%2388593d' opacity='.6'/%3E%3C/svg%3E" alt="视频封面：咖啡色桌面上的在地玩物市场探索记录" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">16:52</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">城市探索</span>
+          <h3>老城区玩物市集一日：在旧摊位里寻找会讲故事的小东西</h3>
+          <p>创作者「南栀」用一天时间走过三条老街，记录摊主、旧物与成交背后的真实表情。</p>
+          <div class="yng-video-foot">
+            <span>南栀</span><span>播放 9.8万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>3,740</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v5' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d3a44'/%3E%3Cstop offset='1' stop-color='%235d9aa5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v5)'/%3E%3Crect x='100' y='90' width='440' height='180' rx='16' fill='%23e3f2f3' opacity='.92'/%3E%3Crect x='140' y='130' width='80' height='100' rx='8' fill='%235d9aa5'/%3E%3Crect x='250' y='130' width='80' height='100' rx='8' fill='%233d7a85'/%3E%3Crect x='360' y='130' width='140' height='44' rx='8' fill='%235d9aa5' opacity='.7'/%3E%3Crect x='360' y='188' width='100' height='42' rx='8' fill='%233d7a85' opacity='.6'/%3E%3C/svg%3E" alt="视频封面：冷蓝色剪辑界面与教程步骤示意" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">10:05</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">教程干货</span>
+          <h3>玩物视频打光三步法：小空间也能拍出专业质感</h3>
+          <p>从主光、补光到背景分离，讲师「灯下白露」手把手拆解预算友好的布光方案。</p>
+          <div class="yng-video-foot">
+            <span>灯下白露</span><span>播放 8.6万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>3,120</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="yng-video-card">
+        <div class="yng-video-thumb">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v6' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23c96b4a'/%3E%3Cstop offset='1' stop-color='%23f2c9a0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v6)'/%3E%3Ccircle cx='480' cy='110' r='62' fill='%23fff3e0' opacity='.85'/%3E%3Cpath d='M0 300c120-60 220-20 320-70s200-20 320-60v190z' fill='%238a442c' opacity='.55'/%3E%3Crect x='90' y='120' width='170' height='120' rx='12' fill='%23fff6ea' opacity='.92'/%3E%3Crect x='120' y='150' width='110' height='12' rx='6' fill='%23c96b4a'/%3E%3Crect x='120' y='176' width='80' height='10' rx='5' fill='%23c96b4a' opacity='.65'/%3E%3Crect x='120' y='200' width='96' height='10' rx='5' fill='%23c96b4a' opacity='.45'/%3E%3C/svg%3E" alt="视频封面：暖橘色夕阳下的手作玩物制作场景" width="640" height="360">
+          <div class="yng-play"><span>▶</span></div>
+          <span class="yng-duration">13:27</span>
+        </div>
+        <div class="yng-video-body">
+          <span class="yng-tag">手作DIY</span>
+          <h3>自己做一枚银色小徽章：从草图到成品的完整流程</h3>
+          <p>手作创作者「野枝」记录一次银饰小徽章的制作，包含选材、打磨与失败复盘。</p>
+          <div class="yng-video-foot">
+            <span>野枝</span><span>播放 7.3万</span>
+            <button class="yng-action" data-like aria-pressed="false">♡ <span>2,860</span></button>
+            <button class="yng-action" data-fav aria-pressed="false">☆ 收藏</button>
+            <button class="yng-action" data-copy>复制链接</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S4 专题企划 -->
+<section class="yng-section" id="yng-topic" style="background:linear-gradient(180deg,#fbf6ec,#f6eedf)">
+  <div class="yng-container">
+    <div class="yng-section-head">
+      <div>
+        <span class="yng-kicker">SPECIAL / 专题企划</span>
+        <h2>银儿女主玩物社区y 专题企划与共创计划</h2>
+        <p>官方持续运营的三大专题，围绕玩物收藏、创作成长与社区共创展开，每期均开放投稿与投票。</p>
+      </div>
+    </div>
+    <div class="yng-topic-grid">
+      <article class="yng-topic-card">
+        <span class="yng-topic-status">更新中 · 第 18 期</span>
+        <h3>玩物灯下：一件小物的完整传记</h3>
+        <p>以单件玩物为主角，记录它的来历、修复与流转，用影像写一部微型传记。</p>
+        <ul>
+          <li>第 18 期 · 银色机械鸟的 48 小时修复</li>
+          <li>第 17 期 · 旧台灯与深夜三点的光</li>
+          <li>第 16 期 · 一枚黄铜书签的旅行</li>
+        </ul>
+      </article>
+      <article class="yng-topic-card">
+        <span class="yng-topic-status">开放报名 · 至 12 月</span>
+        <h3>女主成长季：从收藏到表达</h3>
+        <p>面向女性创作者的成长主题企划，鼓励用玩物作为叙事入口，讲述真实生活。</p>
+        <ul>
+          <li>创作沙龙 · 玩物视频的叙事结构</li>
+          <li>访谈合辑 · 三位创作者的上岸经验</li>
+          <li>成长挑战 · 连续 7 天玩物日记</li>
+        </ul>
+      </article>
+      <article class="yng-topic-card">
+        <span class="yng-topic-status">投票进行中</span>
+        <h3>冬日灯下投票：最想看的十件老玩物</h3>
+        <p>社区共创专题，用户提名并投票，得票最高的玩物进入官方拍摄计划。</p>
+        <ul>
+          <li>提名通道 · 每位用户可提 3 件</li>
+          <li>投票规则 · 每日一次，结果公示</li>
+          <li>拍摄计划 · 预计 12 月中旬上线</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5 创作者/作者矩阵 -->
+<section class="yng-section" id="yng-authors">
+  <div class="yng-container">
+    <div class="yng-section-head">
+      <div>
+        <span class="yng-kicker">CREATORS / 创作者矩阵</span>
+        <h2>社区里的原创创作者与企业伙伴</h2>
+        <p>六位长期深耕玩物与生活影像的创作者，他们的作品构成了社区最有温度的内容生态。</p>
+      </div>
+    </div>
+    <div class="yng-author-grid">
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#b98a3c,#8f6623)">禾</div>
+        <div>
+          <h3>雾港小禾 <span>签约创作者</span></h3>
+          <div class="yng-author-field">玩物修复 · 微距影像</div>
+          <p>专注老玩物修复与微距拍摄三年，擅长把机械结构与人物情绪放在同一个画面里。作品《银色机械鸟》获社区年度口碑作品提名，累计播放超过 320 万。</p>
+          <div class="yng-meta"><span>作品 86</span><span>粉丝 18.4万</span><button class="yng-action" data-author="雾港小禾">作者信息</button></div>
+        </div>
+      </article>
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#5d7a49,#89a06b)">野</div>
+        <div>
+          <h3>木野 <span>收纳达人</span></h3>
+          <div class="yng-author-field">收藏收纳 · 家居整理</div>
+          <p>把玩物收纳做成日常美学的创作者，提出「可看见的分类法」，帮助社区成员在一百件收藏中建立秩序。教程系列稳定更新，是新手用户首选的参考内容。</p>
+          <div class="yng-meta"><span>作品 64</span><span>粉丝 12.7万</span><button class="yng-action" data-author="木野">作者信息</button></div>
+        </div>
+      </article>
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#7d6b96,#a996cc)">栀</div>
+        <div>
+          <h3>南栀 <span>在地探索</span></h3>
+          <div class="yng-author-field">城市探索 · 市集记录</div>
+          <p>常年在老城区与市集之间行走，用镜头记录摊主与旧物交易的真实表情。她相信玩物的价值不只在价格，而在于被谁记住、被谁讲出来。</p>
+          <div class="yng-meta"><span>作品 51</span><span>粉丝 9.8万</span><button class="yng-action" data-author="南栀">作者信息</button></div>
+        </div>
+      </article>
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#5d9aa5,#3d7a85)">露</div>
+        <div>
+          <h3>灯下白露 <span>影像讲师</span></h3>
+          <div class="yng-author-field">布光教程 · 剪辑思路</div>
+          <p>从传统影视行业转入社区创作，擅长把小空间布光讲得清楚可复制。她的三步打光法被大量新手收藏，评论区常被称为「社区最耐心的讲师」。</p>
+          <div class="yng-meta"><span>作品 73</span><span>粉丝 15.2万</span><button class="yng-action" data-author="灯下白露">作者信息</button></div>
+        </div>
+      </article>
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#c96b4a,#a86d4d)">枝</div>
+        <div>
+          <h3>野枝 <span>手作创作者</span></h3>
+          <div class="yng-author-field">手作DIY · 银饰制作</div>
+          <p>以银饰与小型手作为主要方向，坚持在视频里保留失败过程，让手作的真实质感被看见。她主持的「失败复盘」栏目深受社区年轻创作者欢迎。</p>
+          <div class="yng-meta"><span>作品 42</span><span>粉丝 7.6万</span><button class="yng-action" data-author="野枝">作者信息</button></div>
+        </div>
+      </article>
+      <article class="yng-author">
+        <div class="yng-avatar" style="background:linear-gradient(135deg,#a86d4d,#d8ad63)">梨</div>
+        <div>
+          <h3>拾光阿梨 <span>开箱作者</span></h3>
+          <div class="yng-author-field">开箱测评 · 桌面搭配</div>
+          <p>坚持克制的开箱风格，不追求堆叠，而是把材质、工艺与桌面场景讲完整。她的内容被视为社区「品质开箱」的代表，长期保持稳定更新节奏。</p>
+          <div class="yng-meta"><span>作品 58</span><span>粉丝 11.3万</span><button class="yng-action" data-author="拾光阿梨">作者信息</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S6 品牌解析（关键词深度解析 800+ 字） -->
+<section class="yng-section" id="yng-essay">
+  <div class="yng-container">
+    <article class="yng-essay">
+      <span class="yng-kicker">INSIGHT / 品牌解析</span>
+      <h2>银儿女主玩物社区y：一个玩物视频品牌的成长逻辑</h2>
+      <p>理解银儿女主玩物社区y，需要先理解它所处的垂直领域。玩物，是一个由收藏、审美、手工与生活方式共同构成的复合词，它既指向具体的物件，也指向人与物之间长期相处的情绪。银儿女主玩物社区y 从诞生之初就选择了一条更慢的路：用高清原创影像记录这种相处，而不是追逐短平快的流量热点。作为官方网站对外呈现的品牌叙事，这段解析试图说明我们为什么这样做，以及这样做了之后，社区里发生了哪些真实的变化。</p>
+
+      <h3>从一件玩物出发：内容生态如何被建立</h3>
+      <p>社区最早的内容只有一类——开箱。创作者把刚收到的玩物放在桌上，打开包装，讲述第一眼的感受。这种朴素的记录方式很快遇到了瓶颈：观众能记住的往往只是物件的新鲜感，而不是内容本身。于是银儿女主玩物社区y 开始推动创作者往深一层走，提出了「玩物灯下」专题，要求每条作品至少回答三个问题：它从哪里来，它现在被如何使用，它未来可能去往哪里。这个看似简单的规则，让大量视频从晒物变成了叙事。今天的社区内容生态里，修复、收纳、访谈、城市探索、手作教程、深度测评等方向并存，形成多元而包容的内容结构。作为企业运营方，我们更愿意把自己看作一个持续运营的内容社区，而不是一个单纯的分发平台。</p>
+
+      <h3>创作者与企业：双向的内容品质承诺</h3>
+      <p>玩物视频对画质与细节的要求远高于一般生活内容。为此，银儿女主玩物社区y 官方网站上线了创作者成长计划，提供从布光、收音到剪辑节奏的系统课程，并对签约创作者的作品进行上线前的品控审核。灯下白露的三步打光法、雾港小禾的微距镜头语言，都是从这套体系中成长出来并被社区广泛复用的经验。与此同时，我们也与多家玩物修复机构、手作品牌和在地市集建立合作，把企业侧的真实专业能力引入内容生产。这样的双向承诺，使得社区里的精品内容既有创作温度，也具备专业支撑，逐渐形成值得信赖的口碑基础。</p>
+
+      <div class="yng-essay-figure">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='e1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232c3f2d'/%3E%3Cstop offset='1' stop-color='%23a8b98b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23e1)'/%3E%3Crect x='70' y='70' width='230' height='220' rx='14' fill='%23f2f7e8' opacity='.92'/%3E%3Ccircle cx='185' cy='150' r='52' fill='%23a8b98b'/%3E%3Crect x='120' y='220' width='130' height='12' rx='6' fill='%235d7a49'/%3E%3Crect x='120' y='244' width='96' height='10' rx='5' fill='%235d7a49' opacity='.6'/%3E%3Crect x='340' y='100' width='240' height='150' rx='12' fill='%23f2f7e8' opacity='.85'/%3E%3Cpath d='M360 220l50-90 50 90z' fill='%235d7a49' opacity='.6'/%3E%3Crect x='480' y='140' width='70' height='70' rx='10' fill='%2389a06b'/%3E%3C/svg%3E" alt="社区内容生态示意图：绿色调创作工作区与数据面板" width="640" height="360">
+          <figcaption>内容生态示意：从个人记录到社区协作</figcaption>
+        </figure>
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='e2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232f3542'/%3E%3Cstop offset='1' stop-color='%238d9bb5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23e2)'/%3E%3Crect x='90' y='80' width='460' height='200' rx='16' fill='%23f2f5fa' opacity='.93'/%3E%3Cpolyline points='130,240 200,190 270,210 340,150 410,170 480,110' fill='none' stroke='%233d7a85' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='200' cy='190' r='8' fill='%233d7a85'/%3E%3Ccircle cx='340' cy='150' r='8' fill='%233d7a85'/%3E%3Ccircle cx='480' cy='110' r='8' fill='%233d7a85'/%3E%3Crect x='130' y='110' width='120' height='12' rx='6' fill='%238d9bb5'/%3E%3C/svg%3E" alt="品牌成长数据曲线示意图：蓝灰色调趋势线与节点标记" width="640" height="360">
+          <figcaption>持续运营三年间的社区成长曲线</figcaption>
+        </figure>
+      </div>
+
+      <h3>社区活力：互动机制与真实反馈</h3>
+      <p>一个视频社区的生命力，很大程度上取决于用户愿不愿意留下痕迹。银儿女主玩物社区y 在互动设计上做了不少克制但有效的尝试：点赞与收藏分开计权，收藏被视为更重的认可；评论区不追求绝对数量，而是鼓励有具体细节的长评；专题投票让用户直接决定下一期拍摄对象，使内容生产与社区意愿形成闭环。三年下来，社区里沉淀了大量真实而有力量的反馈，有人因为一条修复视频重新开始整理自己的收藏，也有人因为一次投稿第一次完整拍到自己的桌面。这些看似微小的变化，构成了品牌所理解的陪伴与成长。我们始终相信，用户至上的含义不是讨好，而是认真对待每一次表达。</p>
+
+      <h3>未来方向：让玩物影像被更多人看见</h3>
+      <p>面向未来，银儿女主玩物社区y 官方网站会继续在三个方向深耕。其一是内容品质，进一步完善品控流程与原创声明机制，保障正版高清内容的清晰来源；其二是创作者支持，扩大成长计划的覆盖范围，让更多女性创作者与年轻创作者获得稳定的技术与曝光支持；其三是社区治理，保持透明的内容规则与反馈通道，让社区成员参与共建。作为一家在垂直领域稳步前行的企业，我们不追求规模上的喧哗，而希望在影响力与社会责任之间找到平衡。玩物虽小，影像可长。我们希望银儿女主玩物社区y 能成为一件被时间记住的作品，也欢迎每一位认真对待玩物的人，在这里留下属于自己的高清一帧。</p>
+    </article>
+  </div>
+</section>
+
+<!-- S6 用户评价 -->
+<section class="yng-section" id="yng-comments" style="background:linear-gradient(180deg,#f6eedf,#fbf6ec)">
+  <div class="yng-container">
+    <div class="yng-section-head">
+      <div>
+        <span class="yng-kicker">VOICE / 用户口碑</span>
+        <h2>真实用户如何评价银儿女主玩物社区y</h2>
+        <p>来自评论区的六条真实反馈，长度与关注点各不相同，记录社区的口碑与成长。</p>
+      </div>
+    </div>
+    <div class="yng-comment-grid">
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#b98a3c">阿</div><div><b>阿鹿的收藏柜</b><br><small>关注 2 年 · 收藏爱好者</small></div></div>
+        <p>最喜欢「玩物灯下」这个专题，不急着卖货，也不急着下结论。看修复视频的时候会不自觉屏住呼吸，那种感觉在别的平台很难找到。希望以后能多一些微距细节的镜头。</p>
+        <div class="yng-stars">★★★★★</div>
+      </article>
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#5d7a49">林</div><div><b>林间慢拍</b><br><small>创作者 · 入驻 8 个月</small></div></div>
+        <p>投稿流程比我预想的顺，审核意见写得很具体，不是一句「不符合规范」就退了。按建议重剪之后的播放量翻了两倍，这点确实值得信赖。</p>
+        <div class="yng-stars">★★★★★</div>
+      </article>
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#7d6b96">苏</div><div><b>苏叶不熬夜</b><br><small>关注 5 个月 · 新用户</small></div></div>
+        <p>界面很舒服，没有那种一进来就到处闪的推荐位。收纳教程帮我重新整理了桌面，现在每天看着那一角都很治愈。唯一的小建议是搜索可以再聪明一点。</p>
+        <div class="yng-stars">★★★★☆</div>
+      </article>
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#c96b4a">大</div><div><b>大橙子的小铺</b><br><small>合作商户 · 手作品牌</small></div></div>
+        <p>作为合作方，我们更看重内容的真实感。这里没有硬塞广告，创作者会真的把产品用一段时间再讲，这对品牌长期口碑的帮助比短期曝光大得多。</p>
+        <div class="yng-stars">★★★★★</div>
+      </article>
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#5d9aa5">周</div><div><b>周末修表匠</b><br><small>关注 1 年 · 修复爱好者</small></div></div>
+        <p>布光那期看了三遍，照着做之后画面终于不再发灰了。评论区里还有人补充了反光板的摆法，这种互相补充的氛围很少见。</p>
+        <div class="yng-stars">★★★★★</div>
+      </article>
+      <article class="yng-comment-card">
+        <div class="yng-comment-head"><div class="yng-comment-avatar" style="background:#a86d4d">玖</div><div><b>玖玖的桌面</b><br><small>关注 1 年半 · 学生用户</small></div></div>
+        <p>预算有限的学生党也能找到适合自己的内容，攻略会写清楚哪些可以凑合、哪些不能省。这种务实的态度让我愿意一直留在这里。</p>
+        <div class="yng-stars">★★★★☆</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S7 企业动态 + 合作品牌 -->
+<section class="yng-section" id="yng-dynamics">
+  <div class="yng-container">
+    <div class="yng-section-head">
+      <div>
+        <span class="yng-kicker">NEWS / 企业动态</span>
+        <h2>官方发布与持续运营的近况</h2>
+        <p>来自银儿女主玩物社区y 品牌团队的公开资讯，记录每一次更新与共建。</p>
+      </div>
+    </div>
+    <div class="yng-news-list">
+      <article class="yng-news-item">
+        <div class="yng-news-date">2026.11.18</div>
+        <div><h3>「银光周年企划」正式上线，新增 12 期开箱纪录片</h3><p>官方发布冬季专题片单，围绕玩物修复、手作与在地市集展开，同步开放用户投票通道。</p></div>
+      </article>
+      <article class="yng-news-item">
+        <div class="yng-news-date">2026.11.06</div>
+        <div><h3>创作者成长计划第四期完成招募，新增 6 位签约创作者</h3><p>本期共收到 320 份投稿，最终入选者将获得为期三个月的布光、剪辑与账号运营辅导。</p></div>
+      </article>
+      <article class="yng-news-item">
+        <div class="yng-news-date">2026.10.22</div>
+        <div><h3>原创内容声明机制升级，高清片源来源更透明</h3><p>平台对上传作品增加原创声明与素材来源标注，进一步保障正版内容与创作者权益。</p></div>
+      </article>
+      <article class="yng-news-item">
+        <div class="yng-news-date">2026.10.09</div>
+        <div><h3>社区治理反馈通道开放，用户可参与内容规则共建</h3><p>首批收集到的 180 余条建议已纳入规则讨论，部分细则将在下一版本中公示。</p></div>
+      </article>
+    </div>
+
+    <div class="yng-section-head" style="margin-top:52px">
+      <div>
+        <span class="yng-kicker">PARTNERS / 合作品牌</span>
+        <h2>与专业机构共建玩物内容生态</h2>
+        <p>感谢以下合作伙伴在玩物修复、手作与在地文化方向上提供的专业支持。</p>
+      </div>
+    </div>
+    <div class="yng-partners">
+      <div class="yng-partner">银匠工坊<small>玩物修复支持</small></div>
+      <div class="yng-partner">南街旧物集<small>在地市集合作</small></div>
+      <div class="yng-partner">灯下影像社<small>布光技术顾问</small></div>
+      <div class="yng-partner">野枝手作教室<small>手作课程共建</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- S7 FAQ + 投稿联系 -->
+<section class="yng-section" id="yng-faq">
+  <div class="yng-container">
+    <div class="yng-section-head" style="justify-content:center;text-align:center;flex-direction:column">
+      <div>
+        <span class="yng-kicker">HELP / 帮助中心</span>
+        <h2>关于银儿女主玩物社区y 的常见问题</h2>
+        <p>从观看、收藏到投稿与合作，这里汇总了用户最常关心的问题。</p>
+      </div>
+    </div>
+    <div class="yng-faq">
+      <details>
+        <summary>银儿女主玩物社区y 是一个什么样的平台？</summary>
+        <p>银儿女主玩物社区y 是专注玩物收藏、开箱测评与生活影像的原创视频社区，官方网站提供高清内容观看、创作者成长支持与社区互动功能，由品牌团队持续运营。</p>
+      </details>
+      <details>
+        <summary>如何成为社区创作者并上传作品？</summary>
+        <p>点击页面中的「投稿入口」填写作品信息，官方会在三个工作日内给出审核意见。通过审核的作品将进入内容生态分发，并可参与每月的焦点内容评选。</p>
+      </details>
+      <details>
+        <summary>社区对原创与正版内容有什么要求？</summary>
+        <p>所有上传作品需为创作者本人原创或已获授权的正版素材，片中如使用第三方音乐、影像需标注来源。平台保留对侵权内容下架处理的权利。</p>
+      </details>
+      <details>
+        <summary>专题企划的投票与报名如何参与？</summary>
+        <p>在专题区域点击对应企划的报名按钮，或通过投稿入口提交作品并勾选参与的专题。投票通道按专题公示时间开放，每位用户每日一票。</p>
+      </details>
+      <details>
+        <summary>收藏和点赞有什么区别？</summary>
+        <p>点赞代表当下的喜欢，收藏代表希望反复观看。社区在推荐权重上会给收藏更高比重，帮助真正有品质的内容获得更长久的曝光。</p>
+      </details>
+      <details>
+        <summary>合作品牌能否在社区投放内容？</summary>
+        <p>我们接受与玩物、手作、在地文化方向相关品牌的长期合作，合作内容需遵循社区真实表达原则，具体方案可通过帮助中心的联系表单沟通。</p>
+      </details>
+      <details>
+        <summary>观看时遇到播放问题怎么办？</summary>
+        <p>建议先切换网络环境并刷新页面。如问题持续，可在页脚的联系方式中留言，附上作品名称与设备信息，技术团队会尽快排查。</p>
+      </details>
+    </div>
+
+    <div class="yng-cta" style="margin-top:48px">
+      <div>
+        <h2>把你的玩物故事，放进社区的下一条高清影像</h2>
+        <p>无论你是收藏者、修复爱好者，还是刚开始拍摄的新人，银儿女主玩物社区y 都欢迎你的投稿与分享。</p>
+        <p>我们提供布光建议、剪辑反馈与专题推荐，让每一份认真被看见。</p>
+        <div class="yng-cta-actions">
+          <button class="yng-btn yng-btn-primary" data-modal="submit">立即投稿</button>
+          <button class="yng-btn yng-btn-ghost" data-modal="contact">联系合作</button>
+          <button class="yng-btn yng-btn-ghost" data-copy>复制本页链接</button>
+        </div>
+      </div>
+      <div class="yng-cta-stats">
+        <div class="yng-cta-stat"><b>3 个工作日</b><span>投稿审核反馈时长</span></div>
+        <div class="yng-cta-stat"><b>每月 1 期</b><span>焦点内容评选与公示</span></div>
+        <div class="yng-cta-stat"><b>持续开放</b><span>创作者成长计划报名</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S8 页脚 -->
+<footer class="yng-footer">
+  <div class="yng-container">
+    <div class="yng-footer-grid">
+      <div>
+        <a class="yng-brand" href="#yng-top">
+          <span class="yng-brand-mark">银</span>
+          <span>银儿女主玩物社区y<small style="color:#a89b83">OFFICIAL VIDEO</small></span>
+        </a>
+        <p>银儿女主玩物社区y 官方网站，专注玩物收藏、开箱测评与生活影像的原创高清视频社区。我们以匠心记录人与物的真实关系，持续运营值得信赖的内容生态，与创作者、企业一起把玩物故事讲得更远。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#yng-focus">精选内容</a></li>
+          <li><a href="#yng-topic">专题企划</a></li>
+          <li><a href="#yng-authors">创作者矩阵</a></li>
+          <li><a href="#yng-essay">品牌解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区服务</h4>
+        <ul>
+          <li><a href="#yng-comments">用户口碑</a></li>
+          <li><a href="#yng-dynamics">企业动态</a></li>
+          <li><a href="#yng-faq">帮助中心</a></li>
+          <li><a href="#yng-faq">投稿与合作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>内容合作：brand@yiner-wanwu.example</li>
+          <li>投稿咨询：creator@yiner-wanwu.example</li>
+          <li>工作日 10:00 – 19:00</li>
+          <li>社区反馈通道持续开放</li>
+        </ul>
+      </div>
+    </div>
+    <div class="yng-footer-bottom">
+      <span>© 2026 银儿女主玩物社区y 官方网站 · 版权所有 · 持续运营中</span>
+      <span>沪ICP备 2026000000 号 · 网络文化经营许可 · 原创内容受保护</span>
+    </div>
+  </div>
+</footer>
+
+<button class="yng-to-top" id="yngToTop" aria-label="回到顶部">↑</button>
+<div class="yng-toast" id="yngToast" role="status"></div>
+
+<!-- 通用弹窗 -->
+<div class="yng-modal-mask" id="yngModalMask">
+  <div class="yng-modal" id="yngModalBody"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById("yngBurger");
+  var nav = document.getElementById("yngNav");
+  if(burger && nav){
+    burger.addEventListener("click", function(){
+      nav.classList.toggle("yng-open");
+    });
+    nav.addEventListener("click", function(e){
+      if(e.target.tagName === "A"){ nav.classList.remove("yng-open"); }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toast = document.getElementById("yngToast");
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("yng-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("yng-show"); }, 2200);
+  }
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchInput = document.getElementById("yngSearch");
+  var searchBtn = document.getElementById("yngSearchBtn");
+  var searchFeedback = document.getElementById("yngSearchFeedback");
+  var searchIndex = [
+    "银色机械鸟拆解全记录", "旧台灯的重生", "女主玩物日常", "收藏到内容成长记",
+    "冬日灯下投票", "新手开箱避坑攻略", "黄铜小摆件开箱", "一百件玩物收纳法",
+    "三位女主创作者访谈", "老城区玩物市集", "玩物视频打光三步法", "银色小徽章手作"
+  ];
+  function runSearch(){
+    if(!searchInput || !searchFeedback) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchFeedback.textContent = "试试输入：修复、收纳、布光、市集…";
+      searchFeedback.classList.add("yng-show");
+      return;
+    }
+    var hits = searchIndex.filter(function(item){ return item.indexOf(q) !== -1; });
+    if(hits.length){
+      searchFeedback.textContent = "找到 " + hits.length + " 条相关内容：" + hits.slice(0,3).join("、");
+    }else{
+      searchFeedback.textContent = "暂未匹配「" + q + "」，可前往专题企划或投稿入口浏览。";
+    }
+    searchFeedback.classList.add("yng-show");
+  }
+  if(searchBtn){ searchBtn.addEventListener("click", runSearch); }
+  if(searchInput){
+    searchInput.addEventListener("keydown", function(e){
+      if(e.key === "Enter"){ e.preventDefault(); runSearch(); }
+    });
+    searchInput.addEventListener("input", function(){
+      if(searchInput.value.trim().length === 0 && searchFeedback){
+        searchFeedback.classList.remove("yng-show");
+      }
+    });
+  }
+  document.addEventListener("click", function(e){
+    if(searchFeedback && !e.target.closest(".yng-search")){
+      searchFeedback.classList.remove("yng-show");
+    }
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  function parseCount(txt){
+    var m = txt.replace(/,/g,"").match(/(\d+(\.\d+)?)(万|千)?/);
+    if(!m) return {num:0, suffix:""};
+    var num = parseFloat(m[1]);
+    var suffix = m[3] || "";
+    return {num:num, suffix:suffix};
+  }
+  function formatCount(num, suffix){
+    if(suffix === "万"){
+      var v = num / 10000;
+      return (v % 1 === 0 ? v : v.toFixed(1)) + "万";
+    }
+    if(suffix === "千"){
+      var k = num / 1000;
+      return (k % 1 === 0 ? k : k.toFixed(1)) + "千";
+    }
+    return String(Math.round(num));
+  }
+  document.querySelectorAll("[data-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var span = btn.querySelector("span");
+      var active = btn.classList.toggle("yng-liked");
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+      if(!span) return;
+      var parsed = parseCount(span.textContent);
+      var delta = active ? 1 : -1;
+      if(parsed.suffix){
+        parsed.num += delta * (parsed.suffix === "万" ? 1000 : 100);
+      }else{
+        parsed.num += delta;
+      }
+      span.textContent = formatCount(parsed.num, parsed.suffix);
+      btn.firstChild.nodeValue = active ? "♥ " : "♡ ";
+    });
+  });
+
+  document.querySelectorAll("[data-fav]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var active = btn.classList.toggle("yng-liked");
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+      btn.textContent = active ? "★ 已收藏" : "☆ 收藏";
+      showToast(active ? "已加入收藏，可在个人中心查看" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll("[data-copy]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var text = "银儿女主玩物社区y 官方网站 · 玩物影像精选";
+      function done(){ showToast("链接已复制，感谢分享"); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(done).catch(function(){ showToast("复制失败，请手动分享"); });
+      }else{
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand("copy"); done(); }catch(err){ showToast("复制失败，请手动分享"); }
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var mask = document.getElementById("yngModalMask");
+  var modalBody = document.getElementById("yngModalBody");
+
+  function openModal(html){
+    if(!mask || !modalBody) return;
+    modalBody.innerHTML = html;
+    mask.classList.add("yng-show");
+    document.body.style.overflow = "hidden";
+    var closeBtn = modalBody.querySelector(".yng-modal-close");
+    if(closeBtn){
+      closeBtn.addEventListener("click", closeModal);
+    }
+    var form = modalBody.querySelector("form");
+    if(form){
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        closeModal();
+        showToast("提交成功，官方将在 3 个工作日内反馈");
+      });
+    }
+  }
+  function closeModal(){
+    if(!mask) return;
+    mask.classList.remove("yng-show");
+    document.body.style.overflow = "";
+  }
+  if(mask){
+    mask.addEventListener("click", function(e){
+      if(e.target === mask) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeModal();
+  });
+
+  function modalSubmit(){
+    return '' +
+      '<button class="yng-modal-close" aria-label="关闭">×</button>' +
+      '<h3>投稿入口</h3>' +
+      '<p>把你的玩物故事交给银儿女主玩物社区y，官方审核后将进入内容生态分发。</p>' +
+      '<form>' +
+        '<label for="mTitle">作品标题</label>' +
+        '<input id="mTitle" type="text" placeholder="例如：一盏旧台灯的重生" required>' +
+        '<label for="mType">内容方向</label>' +
+        '<select id="mType">' +
+          '<option>玩物修复</option><option>开箱测评</option><option>收纳整理</option>' +
+          '<option>城市探索</option><option>手作DIY</option><option>布光教程</option>' +
+        '</select>' +
+        '<label for="mLink">作品链接或素材说明</label>' +
+        '<input id="mLink" type="text" placeholder="填写网盘链接或拍摄说明">' +
+        '<label for="mDesc">作品简介</label>' +
+        '<textarea id="mDesc" placeholder="用两三句话说明你的创作缘由与亮点"></textarea>' +
+        '<div class="yng-modal-actions">' +
+          '<button type="button" class="yng-btn yng-btn-ghost" data-close>取消</button>' +
+          '<button type="submit" class="yng-btn yng-btn-primary">提交审核</button>' +
+        '</div>' +
+      '</form>';
+  }
+  function modalContact(){
+    return '' +
+      '<button class="yng-modal-close" aria-label="关闭">×</button>' +
+      '<h3>联系合作</h3>' +
+      '<p>品牌合作、专题共建与内容授权，请填写以下信息。</p>' +
+      '<form>' +
+        '<label for="cName">品牌或机构名称</label>' +
+        '<input id="cName" type="text" placeholder="请输入名称" required>' +
+        '<label for="cType">合作类型</label>' +
+        '<select id="cType"><option>内容共创</option><option>专题赞助</option><option>版权授权</option><option>其他</option></select>' +
+        '<label for="cMail">联系方式</label>' +
+        '<input id="cMail" type="text" placeholder="邮箱或联系方式" required>' +
+        '<label for="cMsg">合作说明</label>' +
+        '<textarea id="cMsg" placeholder="简要描述合作想法与周期"></textarea>' +
+        '<div class="yng-modal-actions">' +
+          '<button type="button" class="yng-btn yng-btn-ghost" data-close>取消</button>' +
+          '<button type="submit" class="yng-btn yng-btn-primary">发送需求</button>' +
+        '</div>' +
+      '</form>';
+  }
+  function modalAuthor(name){
+    return '' +
+      '<button class="yng-modal-close" aria-label="关闭">×</button>' +
+      '<h3>' + name + '</h3>' +
+      '<p>银儿女主玩物社区y 认证创作者，长期在社区稳定更新原创玩物影像。</p>' +
+      '<p style="font-size:13.5px;color:#4d402c">擅长方向：玩物修复 / 生活影像 / 桌面美学。作品以细节扎实、叙事克制著称，多次入选社区焦点内容。欢迎关注其主页并参与评论区讨论。</p>' +
+      '<div class="yng-modal-actions">' +
+        '<button type="button" class="yng-btn yng-btn-ghost" data-close>关闭</button>' +
+        '<button type="button" class="yng-btn yng-btn-primary" data-copy>复制主页链接</button>' +
+      '</div>';
+  }
+
+  document.querySelectorAll("[data-modal]").forEach(function(el){
+    el.addEventListener("click", function(){
+      var type = el.getAttribute("data-modal");
+      if(type === "submit"){ openModal(modalSubmit()); }
+      else if(type === "contact"){ openModal(modalContact()); }
+    });
+  });
+  document.querySelectorAll("[data-author]").forEach(function(el){
+    el.addEventListener("click", function(){
+      openModal(modalAuthor(el.getAttribute("data-author")));
+    });
+  });
+  document.addEventListener("click", function(e){
+    if(e.target.matches("[data-close]")) closeModal();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var toTop = document.getElementById("yngToTop");
+  window.addEventListener("scroll", function(){
+    if(!toTop) return;
+    if(window.scrollY > 500){ toTop.classList.add("yng-show"); }
+    else{ toTop.classList.remove("yng-show"); }
+  }, {passive:true});
+  if(toTop){
+    toTop.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+})();
+</script>
+</body>
+                </html>
